@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Music - Player</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="background"></div>
+    <div class="overlay"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="logo">
+                MY<span>MUSIC</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home">Home</a>
+                <a href="#music">Music</a>
+                <a href="#about">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN PLAYER -->
+    <main class="container">
+        <!-- COVER -->
+        <div class="cover-area">
+            <img
+                id="cover"
+                class="cover"
+                src="assets/images/foto.jpg"
+                alt="Cover Music"
+            >
+        </div>
+
+        <!-- PLAYER SECTION -->
+        <div class="player">
+            <div class="small">Now Playing</div>
+
+            <h1 id="title" class="title">Piki Piki Breakbeat</h1>
+            <p id="artist" class="artist">Rian DTM</p>
+
+            <!-- PROGRESS -->
+            <div class="progress-area">
+                <input
+                    id="progress"
+                    class="progress"
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="0"
+                >
+                <div class="time">
+                    <span id="current">0:00</span>
+                    <span id="duration">0:00</span>
+                </div>
+            </div>
+
+            <!-- CONTROLS -->
+            <div class="controls">
+                <button class="control" onclick="previousSong()">⏮</button>
+                <button id="playButton" class="control play" onclick="togglePlay()">▶</button>
+                <button class="control" onclick="nextSong()">⏭</button>
+            </div>
+
+            <!-- VOLUME -->
+            <div class="volume">
+                <span>🔊</span>
+                <input
+                    id="volume"
+                    type="range"
+                    min="0"
+                    max="1"
+                    step="0.01"
+                    value="0.8"
+                >
+            </div>
+
+            <!-- PLAYLIST -->
+            <div class="playlist" id="playlist"></div>
+        </div>
+    </main>
+
+    <!-- SCRIPTS -->
+    <script src="js/player.js"></script>
+    <script src="js/playlist.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
